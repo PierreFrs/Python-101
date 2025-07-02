@@ -1,22 +1,25 @@
-def verification_adn(chaine):
-    is_valid = True
+def verification_adn(chaine : str) -> bool :
     for letter in chaine:
-        if (letter != "a") and (letter != "t") and (letter != "c") and (letter != "g"):
-            is_valid = False
-            break
-    return is_valid
+        # if (letter != "a") and (letter != "t") and (letter != "c") and (letter != "g"):
+        if letter not in "actg":
+            return False
+    return True
 
-def saisie_adn():
-    chaine_saisie = input("Veuillez saisir une chaine adn :")
+def saisie_adn(question : str) -> str :
+    chaine_saisie : str = input(question)
 
-    if verification_adn(chaine_saisie):
-        return chaine_saisie
-    else:
-        print("la chaine saisie n'est pas valide, veuillez réessayer")
-        saisie_adn()
+    while not verification_adn(chaine_saisie) :
+        print("la valeur saisie n'est pas valide, veuillez réessayer.")
+        chaine_saisie : str = input(question)
+        
+    return chaine_saisie
 
-def proportion(chaine, sequence):
+def proportion(chaine : str, sequence : str) -> int :
     return chaine.count(sequence)
 
-def programme_final():
-    
+chaine_adn : str = saisie_adn("Veuillez saisir la chaine d'adn : ")
+sequence_adn : str = saisie_adn("Veuillez saisir la séquence d'adn : ")
+
+occurrence : int = proportion(chaine_adn, sequence_adn)
+
+print(f"Il y a {occurrence} {sequence_adn} dans la chaine : {chaine_adn}")
