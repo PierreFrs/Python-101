@@ -17,9 +17,10 @@ def saisie_adn(question : str) -> str :
 def proportion(chaine : str, sequence : str) -> int :
     return chaine.count(sequence)
 
-chaine_adn : str = saisie_adn("Veuillez saisir la chaine d'adn : ")
-sequence_adn : str = saisie_adn("Veuillez saisir la séquence d'adn : ")
+if __name__ == "__main__":
+    chaine_adn : str = saisie_adn("Veuillez saisir la chaine d'adn : ")
+    sequence_adn : str = saisie_adn("Veuillez saisir la séquence d'adn : ")
 
-occurrence : int = proportion(chaine_adn, sequence_adn)
+    occurrence : int = proportion(chaine_adn, sequence_adn)
 
-print(f"Il y a {occurrence} {sequence_adn} dans la chaine : {chaine_adn}")
+    print(f"Il y a {occurrence} {sequence_adn} dans la chaine : {chaine_adn}")
