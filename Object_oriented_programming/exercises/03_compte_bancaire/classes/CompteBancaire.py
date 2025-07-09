@@ -9,19 +9,18 @@ class CompteBancaire:
     def versement(self, montant):
         if montant > 0:
             self.solde += montant
+            print(f"Votre nouveau solde est de {self.solde}€")
         else:
             print("Le montant doit être supérieur à 0")
 
     def retrait(self, montant):
-        if self.solde >= montant and montant > 0:
             self.solde -= montant
-        else:
-            print("Le retrait n'est pas possible")
-        
+            print(f"Votre nouveau solde est de {self.solde}€")
 
     def agios(self):
         if self.solde < 0:
             self.solde -= abs(self.solde) * 0.05
+            print(f"Votre nouveau solde est de {self.solde}€")
         else:
             print("Des agios ne peuvent être prélevés si le compte est provisionné")
 
