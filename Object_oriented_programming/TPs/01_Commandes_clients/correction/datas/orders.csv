@@ -1,0 +1,6 @@
+order_id;product_id;quantity;customer
+1;1;2;Toto
+2;3;1;Tata
+3;2;3;Titi
+1;1;2;Toto
+1;1;4;Toto
