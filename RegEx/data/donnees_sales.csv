@@ -1,0 +1,6 @@
+ID,Email,Prix,Date_de_naissance,Telephone
+1,jean.dupont[at]example.com,"€35",02/08/1980,06-01-02-03-04
+2,marie.dupont(at)example(dot)fr,"34,99$",1980.08.02,0601020304
+3,pierre.martin[at]exemple.org,"35 euros",1980/08/02,+33 6 01 02 03 04
+4,julie.francois(at)example_com,"€35.00",02-08-1980,6.01.02.03.04
+5,emilie.durand@example.com,"35EUR",1980-08-02,0033 6 01 02 03 04
